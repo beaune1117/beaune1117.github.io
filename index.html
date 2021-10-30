@@ -1,10 +1,106 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>GitHub</title>
-  </head>
-  <body>
-    <h1>test</h1>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html
+        {
+            background-color: deepskyblue;
+        }
+        div
+        {
+            width: 32px;
+            height: 32px;
+            background-image: url("20181226203546509.png");
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var key=0;
+        var bool=false;
+        var speed=2;//每次行走的距離
+        var actor;//人物div
+        const HEIGHT=33;//人物的高
+        const WIDTH=32;//人物的寬
+        var arr=[1,3,2,0];//4排影象 代表 下 左 右 上
+        var num=0;
+        var jumpBool=false;
+        var actorSkinSpeed=8;
+        var jumpSpeed=-15;
+        init();
+        function init() {
+            window.addEventListener("keydown",keyHandler);
+            window.addEventListener("keyup",keyHandler);
+            actor=document.querySelector("div");
+            setInterval(animation,16);
+            //按鍵驅動不能實現 實現的是通過按鍵觸發相應動畫 實現我們的人物的幀動畫 跳轉
+        }
+        
+        function keyHandler(e) {
+            bool=e.type==="keydown";
+            key=e.keyCode;
+            if(!bool){
+                num=0;
+                actor.style.backgroundPositionX=-num*WIDTH+"px";
+            }
+            if(key===32 && !jumpBool){//跳躍 空格驅動
+                jumpBool=true;
+            }
+        }
+        
+        function animation() {
+            jump();
+            if(!bool)return;
+            walk();//單方向行走 實現
+            changeDirection();//方向確定時  內部行走的實現
+        }
+        
+        function jump() {
+            if(!jumpBool)return;
+            jumpSpeed+=1;
+            if(jumpSpeed===15){
+                jumpBool=false;
+                jumpSpeed=-15;
+                return;
+            }
+            actor.style.top=actor.offsetTop+jumpSpeed+"px";
+        }
+        
+        function changeDirection() {
+            actorSkinSpeed--;
+            if(actorSkinSpeed>0) return;
+            actorSkinSpeed=8;
+            num++;
+            if(num>3) num=0;
+            actor.style.backgroundPositionX=-num*WIDTH+"px";
+        }
+
+        function walk() {
+            switch (key){
+                case 37://左 ×1  第二排
+                    actor.style.left=actor.offsetLeft-speed+"px";
+                    actor.style.backgroundPositionY=-arr[0]*HEIGHT+"px";
+                    break;
+                case 38://上 ×3  第四排
+                    actor.style.top=actor.offsetTop-speed+"px";
+                    actor.style.backgroundPositionY=-arr[1]*HEIGHT+"px";
+                    break;
+                case 39://右 ×2  第三排
+                    actor.style.left=actor.offsetLeft+speed+"px";
+                    actor.style.backgroundPositionY=-arr[2]*HEIGHT+"px";
+                    break;
+                case 40://下 ×0  第一排
+                    actor.style.top=actor.offsetTop+speed+"px";
+                    actor.style.backgroundPositionY=-arr[3]*HEIGHT+"px";
+                    break;
+
+            }
+        }
+    </script>
+</body>
 </html>
