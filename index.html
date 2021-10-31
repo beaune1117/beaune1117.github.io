@@ -3,20 +3,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+	<link rel="stylesheet" href="main.css">
     <title>Title</title>
-    <style>
-        html
-        {
-            background-color: white;
-        }
-        div
-        {
-            width: 32px;
-            height: 32px;
-            background-image: url("123.png");
-            position: absolute;
-        }
-    </style>
 </head>
 <body>
     <div></div>
@@ -25,8 +13,8 @@
         var bool=false;
         var speed=2;//每次行走的距離
         var actor;//人物div
-        const HEIGHT=32;//人物的高
-        const WIDTH=32;//人物的寬
+        const HEIGHT=64;//人物的高
+        const WIDTH=64;//人物的寬
         var arr=[1,3,2,0];//4排影象 代表 下 左 右 上
         var num=0;
         var jumpBool=false;
