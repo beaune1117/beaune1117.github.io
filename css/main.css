@@ -3,7 +3,7 @@ html {
 }
 
 body {
-	background-image: url(map.jpg);
+	background-image: url(images/map.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
@@ -13,6 +13,6 @@ body {
 div	{
 	width: 64px;
 	height: 64px;
-	background-image: url("123_1.png");
+	background-image: url("images/character.png");
 	position: absolute;
 }
