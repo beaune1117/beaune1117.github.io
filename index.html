@@ -1,178 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Chris lab</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link type="image/x-icon" sizes="32x32" rel="icon" href="image/favicon.ico">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chris Peng | BIOS / Firmware Engineer</title>
+<link rel="icon" href="image/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{--ink:#1c2230;--muted:#5d6678;--line:#e3e7ee;--bg:#f3f5f8;--card:#fff;--accent:#1f5f8b;--accent-soft:#e6f0f7;--side:#16324a}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;padding:40px 16px}
+.page{max-width:1000px;margin:0 auto;background:var(--card);display:grid;grid-template-columns:300px 1fr;box-shadow:0 10px 40px rgba(20,40,70,.12);border-radius:12px;overflow:hidden}
+aside{background:var(--side);color:#dbe6f0;padding:40px 28px}
+.photo{width:150px;height:150px;border-radius:50%;overflow:hidden;margin:0 auto 20px;border:4px solid rgba(255,255,255,.15)}
+.photo img{width:100%;height:100%;object-fit:cover}
+aside h1{color:#fff;font-size:26px;text-align:center;line-height:1.2}
+aside .role{text-align:center;color:#8fc1e3;font-weight:500;margin-top:6px;letter-spacing:.5px}
+.open{width:fit-content;margin:14px auto 0;font-size:12.5px;font-weight:600;color:#bff0cf;background:rgba(63,185,80,.18);border:1px solid rgba(63,185,80,.45);padding:3px 12px;border-radius:999px}
+.open i{font-size:8px;color:#3fb950;vertical-align:middle;margin-right:4px}
+aside h3{color:#fff;font-size:13px;text-transform:uppercase;letter-spacing:2px;margin:32px 0 12px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,.15)}
+aside ul{list-style:none}
+aside li{font-size:14px;margin-bottom:10px;display:flex;gap:10px;align-items:flex-start;word-break:break-word}
+aside li i{color:#8fc1e3;width:16px;margin-top:4px}
+aside a{color:inherit;text-decoration:none}
+aside a:hover{color:#fff}
+.edu strong{color:#fff;display:block}
+.edu span{font-size:13px;color:#9fb3c6}
+.lang{display:flex;justify-content:space-between;font-size:14px;margin-bottom:8px}
+.lang em{font-style:normal;color:#9fb3c6;font-size:13px}
+main{padding:40px 44px}
+section+section{margin-top:34px}
+h2{font-size:15px;text-transform:uppercase;letter-spacing:2px;color:var(--accent);display:flex;align-items:center;gap:12px;margin-bottom:16px}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+.summary{color:var(--muted)}
+.summary strong{color:var(--ink)}
+.job{position:relative;padding-left:22px;border-left:2px solid var(--line);padding-bottom:22px}
+.job:last-child{padding-bottom:0}
+.job::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--card);border:3px solid var(--accent)}
+.job-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 12px}
+.job h4{font-size:17px}
+.job .co{color:var(--accent);font-weight:600}
+.job .date{font-size:13px;color:var(--muted);white-space:nowrap}
+.job ul{margin:8px 0 0 18px;color:var(--muted);font-size:14.5px}
+.job li{margin-bottom:4px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{background:var(--accent-soft);color:var(--accent);font-size:13px;font-weight:500;padding:4px 12px;border-radius:999px}
+.skill-group+.skill-group{margin-top:14px}
+.skill-group h5{font-size:13px;color:var(--muted);font-weight:600;margin-bottom:8px}
+.interests{display:flex;flex-wrap:wrap;gap:18px;color:var(--muted);font-size:14px}
+.interests i{color:var(--accent);margin-right:6px}
+@media (max-width:760px){.page{grid-template-columns:1fr}main{padding:32px 20px}body{padding:0}.page{border-radius:0}}
+@media print{body{background:#fff;padding:0}.page{box-shadow:none;border-radius:0}aside{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="left_side">
-            <div class="profileText">
-                <div class="imgbx">
-                    <img src="image/pic.jpg"/>
-                </div>
-                <h2>Chris Peng<br><span>BIOS engineer</span></h2>
-            </div>
+<div class="page">
+  <aside>
+    <div class="photo"><img src="image/pic.jpg" alt="Chris Peng"></div>
+    <h1>Chris Peng</h1>
+    <div class="role">BIOS / Firmware Engineer</div>
+    <div class="open"><i class="fa-solid fa-circle"></i> Open to opportunities</div>
 
-            <div class="contactinfo">
-                <h3 class="title">Contact Info</h3>
-                <ul>
-                    <li>
-                        <span class="icon"><i class="fa-solid fa-user"></i></span>
-                        <span class="text">https://beaune1117.github.io/</span>
-                    </li>
-                    <li>
-                        <span class="icon"><i class="fa-regular fa-envelope"></i></span>
-                        <span class="text">beaune1117@gmail.com</span>
-                    </li>
-                    <li>
-                        <span class="icon"><i class="fa-brands fa-linkedin"></i></span>
-                        <span class="text">www.linkedin.com/in/beaune1117</span>
-                    </li>
-                </ul>
-            </div>
+    <h3>Contact</h3>
+    <ul>
+      <li><i class="fa-regular fa-envelope"></i><a href="mailto:beaune1117@gmail.com">beaune1117@gmail.com</a></li>
+      <li><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/beaune1117">linkedin.com/in/beaune1117</a></li>
+      <li><i class="fa-solid fa-globe"></i><a href="https://beaune1117.github.io/">beaune1117.github.io</a></li>
+    </ul>
 
-            <div class="contactinfo education">
-                <h3 class="title">Education</h3>
-                <ul>
-                    <li>
-                        <h5>2010-2014</h5>
-                        <h4>Bachelor Degree in Information Management</h4>
-                        <h4>Taiwan National United University</h4>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="contactinfo language">
-                <h3 class="title">Languages</h3>
-                <ul>
-                    <li>
-                        <span class="text">Mandarin</span>
-                        <span class="percent">
-                            <div style="width: 90%;"></div>
-                        </span>
-                    </li>
-                    <li>
-                        <span class="text">English</span>
-                        <span class="percent">
-                            <div style="width: 55%;"></div>
-                        </span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="right_side">
-            <div class="about">
-                <h2 class="title2">Profile</h2>
-                <p>
-                    <strong>Server professional</strong> with over <strong>8 years</strong> of experience in information technology. Specialized in <strong>system integration testing</strong> and <strong>BIOS/UEFI development</strong>. Extensive experience in Dell server testing and Intel platforms, including Purley to Birch Stream.
-                </p>
-                <p><br>
-                    Possess strong problem-solving skills and a passion for continuous learning, looking forward to further enhancing my professional skills in future endeavors.
-                </p></br>
-            </div>
-            <div class="about">
-                <h2 class="title2">Experience</h2>
-                <div class="box">
-                    <div class="year_company">
-                        <h5>2021-Present</h5>
-                        <h5>Inventec</h5>
-                    </div>
-                    <div class="text">
-                        <h4>BIOS engineer</h4>
-                        <p>a. Responsible for server firmware and feature design.</p></br>
-                        <p>b. Issue triage and debug for server platform with EE and chipset vendor.</p></br>
-                        <p>c. Follow OEM hardware design for porting BIOS code, e.g., PCIe, NVMe VPP, USB ACPI table.</p></br>                        
-                        <p>d. Debug FW related issues for server and system.</p></br>
-                        <p>e. Coordinate with all other function teams for best solution/specification to customers.</p></br>
-                        <p>f. Responsible for server ODM project (Dell) including FW test plan, FW feature design, FW release verification and issue analyze and debug, etc</p>
-                    </div>
-                </div>
-
-                <div class="box">
-                    <div class="year_company">
-                        <h5>2017-2021</h5>
-                        <h5>Inventec</h5>
-                    </div>
-                    <div class="text">
-                        <h4>SIT engineer</h4>
-                        <p>a. Experience in Dell sever validation test for 4 years. </p></br>
-                        <p>b. Served as 4 generations(Dell 12G~15G all platforms) team members to complete the project. </p></br>
-                        <p>c. Good communication and coordination with different teams (RD/End-customer). </p></br>
-                        <p>d. Ability to learn new test skills and draw up the test cases. </p></br>
-                        <p>e. Analyze the issues and triage issues. </p></br>
-                        <p>f. Test skill: Stress test, OS certification, BIOS validation test in Linux/Windows environment. </p></br>
-                        <p>g. Familiar with Windows 2019, RHEL 8, SLES 12, and VMware 6 series certification. </p></br>
-                        <p>h. Familiar with Intel platform (Purley to Eagle Stream).</p>
-                    </div>
-                </div>
-
-                <div class="box">
-                    <div class="year_company">
-                        <h5>2015-2017</h5>
-                        <h5>Hon Hai</h5>
-                    </div>
-                    <div class="text">
-                        <h4>Lab IT (Contract) </h4>
-                        <p>a. Develop scripts for laboratory equipment</p></br>
-                        <p>b. Assist in building the laboratory's internal network</p></br>
-                        <p>c. Work with another team to build the tiptop system</p></br>
-                    </div>
-                </div>
-             </div>
-
-             <div class="about skills">
-                <h2 class="title2">Professtional Skills</h2>
-                <div class="box">
-                    <h4>C</h4>
-                    <div class="percent">
-                        <div style="width: 50%;"></div>
-                    </div>
-                </div>
-
-                <div class="box">
-                    <h4>UEFI</h4>
-                    <div class="percent">
-                        <div style="width: 40%;"></div>
-                    </div>
-                </div>
-
-                <div class="box">
-                    <h4>Shell Script</h4>
-                    <div class="percent">
-                        <div style="width: 60%;"></div>
-                    </div>
-                </div>
-
-                <div class="box">
-                    <h4>Python</h4>
-                    <div class="percent">
-                        <div style="width: 60%;"></div>
-                    </div>
-                </div>
-
-                <div class="box">
-                    <h4>Linux</h4>
-                    <div class="percent">
-                        <div style="width: 70%;"></div>
-                    </div>
-                </div>
-             </div>
-             
-             <div class="about interest">
-                <h2 class="title2">interest</h2>
-                <ul>
-                    <li><i class="fa-solid fa-gamepad"></i> Gaming</li>
-                    <li><i class="fa-solid fa-music"></i> Singing</li>
-                    <li><i class="fa-solid fa-book"></i> Reading</li>
-                    <li><i class="fa-solid fa-basketball"></i> Basketball</li>
-                </ul>
-        </div>
-
+    <h3>Education</h3>
+    <div class="edu">
+      <strong>B.S. Information Management</strong>
+      National United University, Taiwan<br><span>2010 – 2014</span>
     </div>
+
+    <h3>Languages</h3>
+    <div class="lang">Mandarin <em>Native</em></div>
+    <div class="lang">English <em>TOEIC 600</em></div>
+
+    <h3>Platforms</h3>
+    <ul>
+      <li><i class="fa-solid fa-microchip"></i>Intel Xeon: Purley → Whitley → Eagle Stream → Birch Stream (GNR / SRF)</li>
+      <li><i class="fa-solid fa-server"></i>Dell PowerEdge 12G – 17G</li>
+    </ul>
+  </aside>
+
+  <main>
+    <section>
+      <h2>Profile</h2>
+      <p class="summary">Server firmware engineer with <strong>9 years</strong> in Dell PowerEdge ODM projects —
+      spanning <strong>six generations (12G – 17G)</strong>: 4 years in <strong>system integration testing</strong> and
+      5 years in <strong>BIOS/UEFI development</strong>, most recently on Intel's latest <strong>Granite Rapids / Sierra Forest</strong> platforms (Dell 17G).
+      Strong at cross-team issue triage with EE and silicon vendors, and at automating work with Python.</p>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <div class="job">
+        <div class="job-head"><h4>BIOS Engineer · <span class="co">Inventec</span></h4><span class="date">2021 – Jun 2026</span></div>
+        <ul>
+          <li>Developed BIOS firmware for Dell PowerEdge 16G – 17G ODM servers on Eagle Stream and Birch Stream (GNR / SRF).</li>
+          <li>Ported BIOS code to OEM hardware designs: PCIe, NVMe VPP, USB and ACPI tables.</li>
+          <li>Designed firmware features, wrote FW test plans and drove FW release verification.</li>
+          <li>Triaged and debugged platform/firmware issues with EE teams and the chipset vendor.</li>
+          <li>Coordinated with cross-functional teams to align specifications and solutions with the customer.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-head"><h4>SIT Engineer · <span class="co">Inventec</span></h4><span class="date">2017 – 2021</span></div>
+        <ul>
+          <li>Validated Dell PowerEdge servers across 4 generations (12G – 15G, all platforms).</li>
+          <li>Stress testing, OS certification and BIOS validation on Linux and Windows.</li>
+          <li>OS certification: Windows Server 2019, RHEL 8, SLES 12, VMware ESXi 6.x.</li>
+          <li>Wrote test cases; analyzed and triaged issues with RD and the end customer.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-head"><h4>Lab IT (Contract) · <span class="co">Hon Hai</span></h4><span class="date">2015 – 2017</span></div>
+        <ul>
+          <li>Developed scripts to automate laboratory equipment.</li>
+          <li>Helped build the laboratory's internal network.</li>
+          <li>Worked with another team to deploy the TIPTOP ERP system.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Side Projects</h2>
+      <div class="job">
+        <div class="job-head"><h4>AI Content Automation Pipeline</h4><span class="date">2026</span></div>
+        <ul>
+          <li>Built Python pipelines that script, narrate, render and upload videos daily to YouTube / Instagram / Facebook without manual steps.</li>
+          <li>Integrated LLM APIs with local text-to-speech running on a CUDA GPU; scheduled with Windows Task Scheduler.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-head"><h4>MCP Server for AI Agents</h4><span class="date">2026</span></div>
+        <ul>
+          <li>Wrote a Model Context Protocol server that gives AI coding agents read-only access to a local workspace.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="skill-group"><h5>Firmware</h5><div class="tags"><span class="tag">BIOS / UEFI</span><span class="tag">ACPI</span><span class="tag">PCIe</span><span class="tag">NVMe</span><span class="tag">USB</span><span class="tag">Platform debug</span></div></div>
+      <div class="skill-group"><h5>Programming</h5><div class="tags"><span class="tag">C</span><span class="tag">Python</span><span class="tag">Shell Script</span></div></div>
+      <div class="skill-group"><h5>Systems &amp; Validation</h5><div class="tags"><span class="tag">Linux</span><span class="tag">Windows Server</span><span class="tag">VMware ESXi</span><span class="tag">Stress test</span><span class="tag">OS certification</span></div></div>
+      <div class="skill-group"><h5>AI Tools</h5><div class="tags"><span class="tag">LLM APIs</span><span class="tag">AI coding agents</span><span class="tag">MCP</span></div></div>
+    </section>
+
+    <section>
+      <h2>Interests</h2>
+      <div class="interests"><span><i class="fa-solid fa-gamepad"></i>Gaming</span><span><i class="fa-solid fa-music"></i>Singing</span><span><i class="fa-solid fa-book"></i>Reading</span><span><i class="fa-solid fa-basketball"></i>Basketball</span></div>
+    </section>
+  </main>
+</div>
 </body>
 </html>
